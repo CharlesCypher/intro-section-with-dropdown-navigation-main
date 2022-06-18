@@ -20,7 +20,6 @@
       .attribution {
         font-size: 11px;
         text-align: center;
-        height: 1vh;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -34,9 +33,72 @@
           <img src="./images/logo.svg" alt="logo" />
         </div>
         <ul class="ul__left">
-          <li><a href="#">Features</a></li>
-          <!-- <img src="./images/icon-arrow-down.svg" alt="" /> -->
-          <li><a href="#">Company</a></li>
+          <li class="feature__down" id="feature">
+            <a href="#"
+              >Features
+              <img
+                class="down"
+                id="down__arrow0"
+                src="./images/icon-arrow-down.svg"
+                alt="down"
+              />
+            </a>
+            <div class="dropdown down0" id="drop__down0">
+              <ul class="drop__ul drop0">
+                <li>
+                  <a href="#"
+                    ><img
+                      class="icon"
+                      src="./images/icon-todo.svg"
+                      alt="icon-todo"
+                    />Todo List</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-calendar.svg"
+                      alt="icon-calendar"
+                    />Calendar</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-reminders.svg"
+                      alt="icon-reminders"
+                    />Reminders</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-planning.svg"
+                      alt="icon-planning"
+                    />Planning</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="company__down" id="company">
+            <a href="#">
+              Company
+              <img
+                class="down"
+                id="down__arrow1"
+                src="./images/icon-arrow-down.svg"
+                alt="down"
+              />
+            </a>
+            <div class="dropdown down1" id="drop__down1">
+              <ul class="drop__ul drop1">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
         </ul>
@@ -47,8 +109,95 @@
           <button class="nav__btn">Register</button>
         </ul>
       </nav>
+      <div class="hamburger">
+        <img id="menu" src="./images/icon-menu.svg" alt="icon-menu" />
+      </div>
+      <div class="sidebar" id="side__bar">
+        <div class="sidebar__container">
+          <div class="close">
+            <img
+              id="close__menu"
+              src="./images/icon-close-menu.svg"
+              alt="icon-close-menu"
+            />
+          </div>
+          <ul class="side__top">
+            <li class="feature__down" id="side__feature">
+              <a href="#"
+                >Features
+                <img
+                  class="down"
+                  id="side__downarrow0"
+                  src="./images/icon-arrow-down.svg"
+                  alt="down"
+                />
+              </a>
+              <div class="side__dropdown" id="side__dropdown0">
+                <!-- class="dropdown down0" -->
+                <ul class="drop__ul drop0">
+                  <li>
+                    <a href="#"
+                      ><img src="./images/icon-todo.svg" alt="icon-todo" />Todo
+                      List</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-calendar.svg"
+                        alt="icon-calendar"
+                      />Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-reminders.svg"
+                        alt="icon-reminders"
+                      />Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-planning.svg"
+                        alt="icon-planning"
+                      />Planning</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="company__down" id="side__company">
+              <a href="#">
+                Company
+                <img
+                  class="down"
+                  id="side__downarrow1"
+                  src="./images/icon-arrow-down.svg"
+                  alt="down"
+                />
+              </a>
+              <div class="side__dropdown" id="side__dropdown1">
+                <!-- class="dropdown down1" -->
+                <ul class="drop__ul drop1">
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <ul class="side__bottom">
+            <li><a href="#">Login</a></li>
+            <button class="side__btn">Register</button>
+          </ul>
+        </div>
+      </div>
     </header>
-    <main>
+    <main id="main">
       <div class="flex__left">
         <div class="intro">
           <h1>Make</h1>
@@ -69,7 +218,13 @@
         </div>
       </div>
       <div class="flex__right">
-        <img src="./images/image-hero-desktop.png" alt="hero-image" />
+        <picture>
+          <source
+            srcset="images/image-hero-mobile.png"
+            media="(max-width: 475px)"
+          />
+          <img src="images/image-hero-desktop.png" alt="image-hero-desktop" />
+        </picture>
       </div>
     </main>
     <div class="attribution">
@@ -78,5 +233,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">CorizCoder</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
