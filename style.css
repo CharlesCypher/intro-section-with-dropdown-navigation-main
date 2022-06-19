@@ -17,7 +17,6 @@ html {
 }
 body {
   background-color: var(--white);
-  overflow-x: hidden;
 }
 @media screen and (min-width: 1440px) {
   body {
@@ -64,7 +63,7 @@ nav {
 }
 main {
   position: relative;
-  height: 88vh;
+  height: auto;
   display: flex;
 }
 
