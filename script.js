@@ -36,13 +36,13 @@ main.addEventListener("click", () => {
   dropDown0.classList.remove("show");
   downArrow1.classList.remove("is-active");
   dropDown1.classList.remove("show");
-  sideBar.classList.remove("slide");
+  sideBar.classList.remove("is-sliding");
 });
-let sideBarClass = sideBar.classList.contains("slide");
+let sideBarClass = sideBar.classList.contains("is-sliding");
 hamburger.addEventListener("click", () => {
-  sideBar.classList.toggle("slide");
+  sideBar.classList.toggle("is-sliding");
 });
 hamburgerClose.addEventListener("click", () => {
-  sideBar.classList.remove("slide");
+  sideBar.classList.remove("is-sliding");
   sideBar.classList.add("transit");
 });

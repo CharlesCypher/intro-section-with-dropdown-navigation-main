@@ -14,6 +14,7 @@
 
 html {
   font-family: "Epilogue", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   background-color: var(--white);
@@ -50,11 +51,11 @@ ul {
   display: flex;
 }
 header {
-  width: 100%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 nav {
   display: flex;
@@ -182,6 +183,10 @@ main {
   z-index: 1;
   display: none;
 }
+.sidebar.is-sliding {
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
 .flex__left {
   width: 50%;
   margin: 6rem 0 5.5rem 5.5rem;
@@ -264,10 +269,6 @@ main {
     display: block;
     margin: 0 1rem;
     cursor: pointer;
-  }
-  .slide {
-    transition: all 0.3s ease-in-out;
-    transform: translateX(0%);
   }
   .transit {
     transition: all 0.3s ease-in-out;
